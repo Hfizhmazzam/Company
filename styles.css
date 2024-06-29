@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  margin: 0% 0% 0% 0%;
+  padding: 0;
+}
+
 main {
   margin-top: 60px;
 }
@@ -312,6 +322,7 @@ footer {
   font-size: 30px;
   color: white;
 }
+
 /* ---------------------------------- Like Dislike button ---------------------------------- */
 
 .toggle {
@@ -340,21 +351,182 @@ footer {
   display: flex;
   justify-content: flex-start;
 }
-.project-container {
+
+/* ---------------------------------- Closable Item ---------------------------------- */
+ul,
+li {
+  position: relative;
+}
+
+input {
+  width: 70%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(38, 70, 83);
+  height: 40px;
+  margin: 0;
+  padding: 5px;
+}
+
+.addBtn {
+  /* height: 30px; */
+  width: 30%;
+  padding: 6px;
+  background-color: rgb(38, 70, 83);
+  margin: 0;
+  cursor: pointer;
+  color: snow;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.search-tags-list {
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+}
+
+.search-tags-item {
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(38, 70, 83);
+  color: snow;
+  text-align: left;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 5px;
+  color: tomato;
+  font-family: "Fredoka One", cursive;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.contact-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
-.project {
+.illustration-img {
+  margin: 0px;
+  width: 800px;
+}
+
+.contact {
+  display: inline-block;
   margin: 10px 30px;
-  border-bottom: 10px solid #e76f51;
-  border-radius: 10px;
-  padding: 20px;
   text-align: center;
-  box-shadow: 0 0 10px gainsboro;
 }
-.project-title {
-  color: #e76f51;
-  font-weight: bold;
+.profile-contact-img {
+  width: 200px;
+  border-radius: 100%;
+  border: 2px black solid;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.icon {
+  margin-right: 6px;
+}
+.fa-user,
+.fa-map-marker-alt,
+.fa-envelope-open,
+.fa-comment {
+  font-size: 27px;
+}
+
+.form-label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.form-input {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  outline: none;
+  height: 48px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.input-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  height: 100%;
+}
+
+.textarea-container {
+  display: flex;
+  justify-content: center;
+}
+.form-textarea {
+  position: relative;
+}
+.textarea {
+  border-style: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+  margin-top: 10px;
+}
+
+.submit {
+  border-style: none;
+  border-radius: 25px;
+  color: aliceblue;
+  background-color: rgb(38, 70, 83);
+  margin: 5px;
+  cursor: pointer;
+}
+
+.input-item:focus + .form-label {
+  top: -5px;
+  left: -2px;
+  font-size: 10px;
+}
+.textarea:focus + .form-label {
+  top: -5px;
+  left: -2px;
+  font-size: 10px;
+}
+
+.input-item:not(:placeholder-shown).input- item:not(:focus) + .form-label {
+  top: -2px;
+  left: -2px;
+  font-size: 10px;
+  color: rgb(138, 130, 130);
 }
 
 .section-slider {
@@ -367,10 +539,12 @@ footer {
   position: relative;
   width: 640px;
   height: 426px;
+  z-index: 10;
 }
 .slide {
   width: 100%;
   position: absolute;
+  clip-path: circle(0% at 0 19%);
 }
 .slide img {
   width: 100%;
@@ -411,18 +585,26 @@ footer {
   margin: 0 5px;
 }
 
-.slide {
-  /* tambahkan kode di bawah ini*/
-  clip-path: circle(0% at 0 50%);
-}
-
 .slide.active {
   clip-path: circle(150% at 0 50%);
   transition: 2s;
   transition-property: clip-path;
 }
+
 .slider-btn.active {
   background-color: rgb(38, 70, 83);
+}
+
+.wave1 {
+  position: absolute;
+  top: 270px;
+  z-index: 2;
+}
+
+.wave2 {
+  position: absolute;
+  top: 300px;
+  z-index: 3;
 }
 
 .section-container {
@@ -468,6 +650,7 @@ footer {
   color: gray;
   letter-spacing: 2px;
 }
+
 .skills-flex {
   display: flex;
   align-items: center;
@@ -490,6 +673,7 @@ footer {
   border-radius: 5px;
   background-color: rgb(243, 199, 117);
 }
+
 .activity-flex {
   display: flex;
   flex-wrap: wrap;
@@ -518,7 +702,7 @@ footer {
 }
 
 .all-projects {
-  margin-top: 5%;
+  margin: 5%;
 }
 .project-detail {
   margin: 50px 30px 100px;
@@ -574,18 +758,18 @@ p.project-link {
   transform: translateY(-50%);
 }
 
-button {
+/* button {
   margin: 10px;
   padding: 8px;
   border-radius: 5px;
   border: none;
-  background-color: aquamarine;
+  background-color: lightblue;
   cursor: pointer;
-  color: aliceblue;
+  color: white;
 }
 
 .modal-container {
-  background-color: brown;
+  background-color: black;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -600,10 +784,10 @@ button {
   position: relative;
   width: 150px;
   padding: 30px;
+  border-radius: 10px;
   text-align: center;
-  background-color: aqua;
+  background-color: white;
 }
-
 .modal h3 {
   padding: 0;
   margin: 0;
@@ -614,4 +798,52 @@ button {
   top: 0;
   right: 10px;
   cursor: pointer;
+} */
+
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.411);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.modal {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  background-color: white;
+  padding: 35px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+.modal p {
+  margin: 20px 0;
+  padding: 0;
+  font-size: 15px;
+}
+.modal img {
+  display: block;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  width: 300px;
 }

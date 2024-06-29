@@ -2,14 +2,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Identitas</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/
 f90068558c.js"
       crossorigin="anonymous"
     ></script>
-
+  </head>
   <body>
     <header>
       <div class="header">
@@ -27,17 +27,24 @@ f90068558c.js"
       </div>
     </header>
 
-<!---<button>Show Modal</button>
-<div class="modal-container">
-  <div class="modal">
-    <h3>This is Modal</h3>
-    <span>x</span>
-  </div>
-</div>-->
+    <!-- <button>Show Modal</button>
+    <div class="modal-container">
+      <div class="modal">
+        <h3>This is Modal</h3>
+        <span>x</span>
+      </div>
+    </div> -->
+
     <main>
       <section id="jumbotron">
         <div class="jumbotron">
-          <h1 class="jumbotron-title">Get Programming Tips Here!</h1>
+          <h1
+            class="jumbotron-title"
+            onmouseover="changeTitle(this)"
+            onmouseout="changeTitleBack(this)"
+          >
+            Get Programming Tips Here!
+          </h1>
           <div class="header-flex">
             <div>
               <h2 class="jumbotron-text">
@@ -58,6 +65,8 @@ f90068558c.js"
             </div>
             <div>
               <img
+                onmouseover="changeImage(this)"
+                onmouseout="changeImageBack(this)"
                 class="jumbotron-img"
                 src="https://i0.wp.com/timedooracademy.com/wp-content/uploads/2022/10/Kelapa-Gading.jpeg"
                 alt="gambar"
@@ -69,63 +78,103 @@ f90068558c.js"
         </div>
       </section>
 
+      <svg
+        class="wave1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#0099ff"
+          fill-opacity="1"
+          d="M0,192L20,208C40,224,80,256,120,261.3C160,267,200,245,240,197.3C280,149,320,75,360,90.7C400,107,440,213,480,245.3C520,277,560,235,600,234.7C640,235,680,277,720,288C760,299,800,277,840,277.3C880,277,920,299,960,277.3C1000,256,1040,192,1080,154.7C1120,117,1160,107,1200,122.7C1240,139,1280,181,1320,192C1360,203,1400,181,1420,170.7L1440,160L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
+        ></path>
+      </svg>
+
+      <svg
+        class="wave2"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#00ff00"
+          fill-opacity="1"
+          d="M0,192L20,208C40,224,80,256,120,261.3C160,267,200,245,240,197.3C280,149,320,75,360,90.7C400,107,440,213,480,245.3C520,277,560,235,600,234.7C640,235,680,277,720,288C760,299,800,277,840,277.3C880,277,920,299,960,277.3C1000,256,1040,192,1080,154.7C1120,117,1160,107,1200,122.7C1240,139,1280,181,1320,192C1360,203,1400,181,1420,170.7L1440,160L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
+        ></path>
+      </svg>
+
       <section id="slider" class="section-slider">
         <div class="image-slider">
           <div class="slide active">
-            <img src="" alt="" />
+            <img
+              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg"
+              alt="viego"
+            />
             <div class="slide-text">
-              <h2>Game Development</h2>
+              <h2>Viego</h2>
               <p>
-                Instead of playing game all day long, why not create your own?
+                Viego commands the Black Mist to haunt and surround a piece of
+                terrain. Viego can hide in the Mist as a wraith, gaining
+                camouflage,
               </p>
             </div>
           </div>
 
-          <div class="image-slider">
-            <div class="slide active">
-              <img src="" alt="" />
-              <div class="slide-text">
-                <h2>Game Development</h2>
-                <p>
-                  Instead of playing game all day long, why not create your own?
-                </p>
-              </div>
+          <div class="slide">
+            <img
+              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gwen_0.jpg"
+              alt="gwen"
+            />
+            <div class="slide-text">
+              <h2>Gwen</h2>
+              <p>
+                Gwen is a champion in League of Legends.[1] This article section
+                only contains champion skins.
+              </p>
             </div>
           </div>
 
-          <div class="image-slider">
-            <div class="slide active">
-              <img src="" alt="" />
-              <div class="slide-text">
-                <h2>Game Development</h2>
-                <p>
-                  Instead of playing game all day long, why not create your own?
-                </p>
-              </div>
+          <div class="slide">
+            <img
+              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zeri_0.jpg"
+              alt="zeri"
+            />
+            <div class="slide-text">
+              <h2>Zeri</h2>
+              <p>
+                A headstrong, spirited young woman from Zaun's working-class,
+                Zeri channels her electric magic to charge herself and her
+                custom-crafted gun.
+              </p>
             </div>
           </div>
 
-          <div class="image-slider">
-            <div class="slide active">
-              <img src="" alt="" />
-              <div class="slide-text">
-                <h2>Game Development</h2>
-                <p>
-                  Instead of playing game all day long, why not create your own?
-                </p>
-              </div>
+          <div class="slide">
+            <img
+              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg"
+              alt="Caitlyn"
+            />
+            <div class="slide-text">
+              <h2>Caitlyn</h2>
+              <p>
+                Caitlyn with U.GG's best data for every build. The highest win
+                rate Caitlyn build, from rune set to skill order to item path,
+                for ADC.
+              </p>
             </div>
           </div>
 
-          <div class="image-slider">
-            <div class="slide active">
-              <img src="" alt="" />
-              <div class="slide-text">
-                <h2>Game Development</h2>
-                <p>
-                  Instead of playing game all day long, why not create your own?
-                </p>
-              </div>
+          <div class="slide">
+            <img
+              src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nunu_0.jpg"
+              alt=""
+            />
+            <div class="slide-text">
+              <h2>Nunu</h2>
+              <p>
+                Nunu is a champion in League of Legends.[1] The champion Nunu
+                consists of two beings: The yeti Willump is the primary one
+                answering movement commands
+              </p>
             </div>
           </div>
 
@@ -161,6 +210,19 @@ f90068558c.js"
               </button>
             </div>
           </div>
+
+          <div class="search-tags-container">
+            <div class="input-tag">
+              <h3 class="aside-title">Search here</h3>
+              <input id="myInput" type="text" placeholder="Search..." />
+              <span class="addBtn" onclick="newElement()">Search</span>
+            </div>
+
+            <ul id="myUL" class="search-tags-list">
+              <li class="search-tags-item">HTML</li>
+              <li class="search-tags-item">Code</li>
+            </ul>
+          </div>
         </aside>
 
         <div class="content">
@@ -193,7 +255,6 @@ f90068558c.js"
                 </p>
               </div>
             </div>
-
             <div class="project-container">
               <div class="project">
                 <img
@@ -221,6 +282,7 @@ f90068558c.js"
               </div>
             </div>
           </article>
+
           <article id="video">
             <div class="item-video">
               <h3 class="article-title">What is Coding?</h3>
@@ -238,7 +300,7 @@ f90068558c.js"
               <h3 class="article-title">Coding is Not Difficult !</h3>
               <iframe
                 class="video-content"
-                width="00px"
+                width="700px"
                 height="400px"
                 src="https://www.youtube.com/embed/hb7Q33ysCwI"
                 title="YouTube video player"
@@ -248,6 +310,7 @@ f90068558c.js"
               ></iframe>
             </div>
           </article>
+
           <article id="maps">
             <div class="maps">
               <h3 class="article-title">Location</h3>
@@ -270,15 +333,6 @@ f90068558c.js"
           </article>
         </div>
       </div>
-
-      <button>Show Modal</button>
-<div class="modal-container">
-  <div class="modal">
-    <h3>This is Modal</h3>
-    <span>x</span>
-  </div>
-</div>
-
     </main>
     <!-- ------------------------ Meeting 10 ----------------------- -->
     <footer>
@@ -297,5 +351,4 @@ f90068558c.js"
     </footer>
   </body>
   <script src="main.js"></script>
-
 </html>
